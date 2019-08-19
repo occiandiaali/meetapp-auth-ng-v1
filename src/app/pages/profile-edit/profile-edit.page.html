@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/menu/profile"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Edit profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label padding>Upload a profile pic</ion-label>
+  <ion-item id="ava">
+    <ion-avatar>
+        <img src="../../../assets/silhouette.png" alt="avatar" />
+    </ion-avatar>
+      <ion-input type="file"></ion-input>
+    </ion-item>    
+    <form >
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+          <ion-item>
+            <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Last Name <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label position="stacked">Date of birth <ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Location <ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="text"></ion-input>
+              </ion-item>
+        </ion-list>
+
+        <div class="ion-padding">
+          <ion-button expand="block" type="submit" class="ion-no-margin" color="secondary">Save</ion-button>
+        </div>
+      </form>
+</ion-content>

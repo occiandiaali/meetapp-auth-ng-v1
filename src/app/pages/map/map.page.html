@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>MeetApp</ion-title>
+    </ion-toolbar>
+  </ion-header>
+   
+  <ion-content padding>
+    <ion-img src="https://cdn.pixabay.com/photo/2015/04/13/04/15/map-719969_960_720.jpg" alt="map"
+       *ngIf="mapShows"></ion-img>
+    <ion-button (click)="toggleImage()">{{ mapShows ? "Hide" : "Show"}} Map</ion-button>
+
+    <ion-card>
+        <ion-card-header>
+          <ion-card-title>Your coordinates:</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-item>
+          <ion-label>Latitude: {{lat | number: '1.4-4'}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Longitude: {{lng | number: '1.4-4'}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Near you: {{200 / 10}}</ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+  </ion-content>
